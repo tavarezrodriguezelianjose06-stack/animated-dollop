@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html> <link rel="manifest" href="manifest.json">
+<head>
+<meta charset="UTF-8">
+<title>ColmadoApp</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:#f2f2f2;
+margin:0;
+padding:0;
+}
+
+header{
+background:#0a7cff;
+color:white;       
+text-align:center;
+padding:20px;
+}
+
+header h1{
+margin:0;
+}
+
+header p{
+margin:5px;
+}
+
+#buscar{
+width:90%;
+margin:15px;
+padding:12px;
+font-size:16px;
+}
+
+.productos{
+padding:10px;
+}
+
+.producto{
+background:white;
+margin:10px;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.producto h3{
+margin:0;
+}
+
+.producto p{
+margin:5px 0;
+}
+
+.pedir{
+background:#25D366;
+color:white;
+border:none;
+width:100%;
+padding:15px;
+font-size:18px;
+margin-top:10px;
+border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  
+  <img src="logo.png" width="220">
+  
+  <p>Tu colmado desde el celular</p>
+  
+</header>
+
+<input type="text" id="buscar" placeholder="Buscar producto..." onkeyup="filtrar()">
+
+<div class="productos">
+
+<div class="producto">
+<h3>Arroz</h3>
+<p>Precio: RD$60</p>
+<button class="pedir" onclick="pedir('Arroz')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+<h3>Azúcar</h3>
+<p>Precio: RD$70</p>
+<button class="pedir" onclick="pedir('Azúcar')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+<h3>Leche</h3>
+<p>Precio: RD$80</p>
+<button class="pedir" onclick="pedir('Leche')">Pedir por WhatsApp</button>
+</div>
+<div class="producto">
+  <h3>Huevo</h3>
+  <p>Precio: RD$10</p>
+  <button class="pedir" onclick="pedir('Huevo')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Salami</h3>
+  <p>Precio: RD$70</p>
+  <button class="pedir" onclick="pedir('Salami')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Habichuelas</h3>
+  <p>Precio: RD$65</p>
+  <button class="pedir" onclick="pedir('Habichuelas')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Spaghetti</h3>
+  <p>Precio: RD$50</p>
+  <button class="pedir" onclick="pedir('Spaghetti')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Aceite</h3>
+  <p>Precio: RD$120</p>
+  <button class="pedir" onclick="pedir('Aceite')">Pedir por WhatsApp</button>
+</div>
+<div class="producto">
+<h3>Pan</h3>
+<p>Precio: RD$25</p>
+<button class="pedir" onclick="pedir('Pan')">Pedir por WhatsApp</button>
+</div>
+<div class="producto">
+  <h3>Galletas</h3>
+  <p>Precio: RD$35</p>
+  <button class="pedir" onclick="pedir('Galletas')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Sardinas</h3>
+  <p>Precio: RD$55</p>
+  <button class="pedir" onclick="pedir('Sardinas')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Atún</h3>
+  <p>Precio: RD$85</p>
+  <button class="pedir" onclick="pedir('Atún')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Café</h3>
+  <p>Precio: RD$120</p>
+  <button class="pedir" onclick="pedir('Café')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Chocolate</h3>
+  <p>Precio: RD$60</p>
+  <button class="pedir" onclick="pedir('Chocolate')">Pedir por WhatsApp</button>
+</div>
+<h2> Bebidas </h2>
+
+<div class="producto">
+  <h3>Refresco</h3>
+  <p>Precio: RD$75</p>
+  <button class="pedir" onclick="pedir('Refresco')">Pedir por WhatsApp</button>
+</div>
+
+<h2> Bebidas </h2>
+<div class="producto">
+  <h3>Agua</h3>
+  <p>Precio: RD$25</p>
+  <button class="pedir" onclick="pedir('Agua')">Pedir por WhatsApp</button>
+</div>
+</div>
+<div class="producto">
+  <h3>Mayonesa</h3>
+  <p>Precio: RD$90</p>
+  <button class="pedir" onclick="pedir('Mayonesa')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Ketchup</h3>
+  <p>Precio: RD$85</p>
+  <button class="pedir" onclick="pedir('Ketchup')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Mostaza</h3>
+  <p>Precio: RD$80</p>
+  <button class="pedir" onclick="pedir('Mostaza')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Avena</h3>
+  <p>Precio: RD$60</p>
+  <button class="pedir" onclick="pedir('Avena')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Harina</h3>
+  <p>Precio: RD$55</p>
+  <button class="pedir" onclick="pedir('Harina')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Maíz</h3>
+  <p>Precio: RD$50</p>
+  <button class="pedir" onclick="pedir('Maíz')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Yuca</h3>
+  <p>Precio: RD$40</p>
+  <button class="pedir" onclick="pedir('Yuca')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Papa</h3>
+  <p>Precio: RD$45</p>
+  <button class="pedir" onclick="pedir('Papa')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Cebolla</h3>
+  <p>Precio: RD$35</p>
+  <button class="pedir" onclick="pedir('Cebolla')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Ajo</h3>
+  <p>Precio: RD$30</p>
+  <button class="pedir" onclick="pedir('Ajo')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Lechuga</h3>
+  <p>Precio: RD$35</p>
+  <button class="pedir" onclick="pedir('Lechuga')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Tomate</h3>
+  <p>Precio: RD$40</p>
+  <button class="pedir" onclick="pedir('Tomate')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Plátano</h3>
+  <p>Precio: RD$25</p>
+  <button class="pedir" onclick="pedir('Plátano')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Banana</h3>
+  <p>Precio: RD$20</p>
+  <button class="pedir" onclick="pedir('Banana')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Naranja</h3>
+  <p>Precio: RD$30</p>
+  <button class="pedir" onclick="pedir('Naranja')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Manzana</h3>
+  <p>Precio: RD$50</p>
+  <button class="pedir" onclick="pedir('Manzana')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Uvas</h3>
+  <p>Precio: RD$90</p>
+  <button class="pedir" onclick="pedir('Uvas')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Queso</h3>
+  <p>Precio: RD$110</p>
+  <button class="pedir" onclick="pedir('Queso')">Pedir por WhatsApp</button>
+</div>
+
+<div class="producto">
+  <h3>Mantequilla</h3>
+  <p>Precio: RD$95</p>
+  <button class="pedir" onclick="pedir('Mantequilla')">Pedir por WhatsApp</button>
+</div>
+
+<h2> Bebidas </h2>
+<div class="producto">
+  <h3>Yogurt</h3>
+  <p>Precio: RD$75</p>
+  <button class="pedir" onclick="pedir('Yogurt')">Pedir por WhatsApp</button>
+</div>
+<script>
+
+function pedir(producto){
+
+let numero="18298260038"
+
+let mensaje="Hola quiero pedir: "+producto
+
+let url="https://wa.me/"+numero+"?text="+encodeURIComponent(mensaje)
+
+window.location.href = url
+
+}
+
+function filtrar(){
+
+let input=document.getElementById("buscar").value.toLowerCase()
+
+let productos=document.querySelectorAll(".producto")
+
+productos.forEach(p=>{
+
+let nombre=p.innerText.toLowerCase()
+
+if(nombre.includes(input)){
+p.style.display="block"
+}else{
+p.style.display="none"
+}
+
+})
+
+}
+
+</script>
+
+</body>
+</html>
