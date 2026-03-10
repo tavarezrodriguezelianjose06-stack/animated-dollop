@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+i<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -260,15 +260,24 @@ border-radius:8px;
 </div>
 
 <script>
+let carrito = [];
 
 function pedir(producto){
-
-let mensaje="Hola quiero pedir "+producto;
-
-window.open("https://wa.me/18298260038?text="+mensaje)
-
+carrito.push(producto);
+alert(producto + " agregado al carrito");
 }
 
+function enviarPedido(){
+
+let mensaje="Hola quiero pedir:\n";
+
+carrito.forEach(p=>{
+mensaje += "- " + p + "\n";
+});
+
+window.open("https://wa.me/18298260038?text="+encodeURIComponent(mensaje));
+
+}
 </script>
 
 </body>
