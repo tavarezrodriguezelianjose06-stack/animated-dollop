@@ -337,14 +337,31 @@ Enviar pedido por WhatsApp
 <button onclick="vaciarCarrito()">Vaciar carrito</button>
   
 <script>
-let carrito = [];
+let carrito = []; 
 
 function pedir(producto){
 carrito.push(producto);
 document.getElementById("contadorCarrito").innerText="🛒 Carrito ("+carrito.length+")";
 alert(producto + " agregado al carrito");
 }
+function buscarProducto(){
 
+let input = document.getElementById("buscar").value.toLowerCase();
+let productos = document.getElementsByClassName("producto");
+
+for(let i=0;i<productos.length;i++){
+
+let texto = productos[i].innerText.toLowerCase();
+
+if(texto.includes(input)){
+productos[i].style.display="block";
+}else{
+productos[i].style.display="none";
+}
+
+}
+
+}
 function enviarPedido(){
 
 let mensaje="Hola quiero pedir:\n";
