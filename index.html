@@ -341,6 +341,7 @@ let carrito = [];
 
 function pedir(producto){
 carrito.push(producto);
+document.getElementById("contadorCarrito").innerText="🛒 Carrito ("+carrito.length+")";
 alert(producto + " agregado al carrito");
 }
 
