@@ -5,7 +5,22 @@ i<!DOCTYPE html>
 <title>ColmadoApp</title>
 
 <style>
+.menu{
+position:fixed;
+bottom:0;
+width:100%;
+background:white;
+display:flex;
+justify-content:space-around;
+padding:10px;
+box-shadow:0 -2px 6px rgba(0,0,0,0.2);
+}
 
+.menu button{
+background:none;
+border:none;
+font-size:16px;
+}
 body{
 font-family:Arial;
 margin:0;
@@ -374,6 +389,12 @@ window.open("https://wa.me/18298260038?text="+encodeURIComponent(mensaje));
 
 }
 </script>
+ <div class="menu">
+<button>🏠 Inicio</button>
+<button>🔎 Buscar</button>
+<button>🛒 Carrito</button>
+<button>👤 Perfil</button>
+</div>
   
 </body>
 </html>
