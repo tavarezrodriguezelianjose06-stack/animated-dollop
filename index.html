@@ -366,10 +366,23 @@ Enviar pedido por WhatsApp
 <script>
 let carrito = []; 
 
-function pedir(producto){
+let total = 0;
+
+function pedir(producto,precio){
+
 carrito.push(producto);
-document.getElementById("contadorCarrito").innerText="🛒 Carrito ("+carrito.length+")";
-alert(producto + " agregado al carrito");
+
+total = total + precio;
+
+document.getElementById("contadorCarrito").innerText =
+"🛒 Carrito ("+carrito.length+")";
+
+document.getElementById("listaCarrito").innerHTML +=
+"• " + producto + " - RD$" + precio + "<br>";
+
+document.getElementById("totalCarrito").innerText =
+"Total: RD$"+total;
+
 }
 function buscarProducto(){
 
