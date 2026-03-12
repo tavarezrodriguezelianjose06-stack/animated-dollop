@@ -78,6 +78,18 @@ border-radius:8px;
 <div id="contadorCarrito" style="padding:10px;font-weight:bold;">
 🛒 Carrito (0)
 </div>
+  
+<div style="display:flex;gap:10px;padding:10px;overflow-x:auto;">
+
+<button onclick="filtrarCategoria('comida')">🥫 Comida</button>
+
+<button onclick="filtrarCategoria('bebida')">🥤 Bebidas</button>
+
+<button onclick="filtrarCategoria('snack')">🍪 Snacks</button>
+
+<button onclick="filtrarCategoria('todos')">🛒 Todos</button>
+</div>
+  
 <input
 type="text"
 id="buscar"
@@ -416,6 +428,25 @@ mensaje += "- " + p + "\n";
 });
 
 window.open("https://wa.me/18298260038?text="+encodeURIComponent(mensaje));
+
+}
+function filtrarCategoria(categoria){
+
+let productos = document.getElementsByClassName("producto");
+
+for(let i = 0; i < productos.length; i++){
+
+if(categoria === "todos"){
+productos[i].style.display = "block";
+}
+else if(productos[i].classList.contains(categoria)){
+productos[i].style.display = "block";
+}
+else{
+productos[i].style.display = "none";
+}
+
+}
 
 }
 </script>
