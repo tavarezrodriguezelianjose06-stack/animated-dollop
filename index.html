@@ -365,9 +365,12 @@ carrito.forEach(p=>{
 mensaje += "- " + p + "\n";
 });
 
+mensaje += "\nTotal: RD$" + total;
+
 window.open("https://wa.me/18298260038?text="+encodeURIComponent(mensaje));
 
 }
+  
 function filtrarCategoria(categoria){
 
 let productos = document.getElementsByClassName("producto");
